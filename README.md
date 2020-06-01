@@ -1,1 +1,3 @@
-# frontend_mentor
+# Frontend Mentor
+
+Frontend Mentor challenge repository
