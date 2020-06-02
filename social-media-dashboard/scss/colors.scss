@@ -1,0 +1,83 @@
+/* Colors */
+
+.red-text {
+  color: $bright-red;
+  transition: 0.7s ease-in-out;
+}
+
+.green-text {
+  color: $lime-green;
+  transition: 0.7s ease-in-out;
+}
+
+.bg-1 {
+  background-color: $white;
+  transition: 0.7s ease-in-out;
+}
+
+.bg-2 {
+  background-color: $very-pale-blue;
+  transition: 0.7s ease-in-out;
+}
+
+.card {
+  background-color: $light-grayish-blue;
+  transition: 0.7s ease-in-out;
+}
+
+.toggle_wrapper:before {
+  background-color: $light-toggle;
+  transition: 0.7s ease-in-out;
+}
+
+.toggle_wrapper__label_toggle {
+  background-color: $light-toggle;
+  transition: 0.7s ease-in-out;
+
+  &:after {
+    background-color: $white;
+    transition: 0.7s ease-in-out;
+  }
+}
+
+.text-1 {
+  color: $very-dark-blue-1;
+}
+
+.text-2 {
+  color: $dark-grayish-blue;
+}
+
+.dark {
+  .toggle_wrapper:before {
+    background-color: $dark-desaturated-blue;
+  }
+
+  .bg-1 {
+    background-color: $very-dark-blue-1;
+  }
+
+  .bg-2 {
+    background-color: $very-dark-blue-2;
+  }
+
+  .all-time.card {
+    background-color: $dark-desaturated-blue;
+  }
+
+  .toggle_wrapper__label_toggle {
+    background-image: $dark-toggle;
+  }
+
+  .toggle_wrapper__label_toggle:after {
+    background-color: $dark-desaturated-blue;
+  }
+
+  .text-1 {
+    color: $white;
+  }
+
+  .text-2 {
+    color: $desaturated-blue;
+  }
+}
