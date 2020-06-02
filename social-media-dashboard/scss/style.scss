@@ -1,0 +1,19 @@
+@import "normalize";
+@import "general";
+@import "variables";
+@import "colors";
+@import "font-size";
+@import "header";
+
+* {
+  font-family: inter;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
