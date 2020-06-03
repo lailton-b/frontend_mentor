@@ -1,15 +1,5 @@
 /* Colors */
 
-.red-text {
-  color: $bright-red;
-  transition: 0.7s ease-in-out;
-}
-
-.green-text {
-  color: $lime-green;
-  transition: 0.7s ease-in-out;
-}
-
 .bg-1 {
   background-color: $white;
   transition: 0.7s ease-in-out;
@@ -40,7 +30,8 @@
   }
 }
 
-.text-1 {
+.text-1,
+.number-1 {
   color: $very-dark-blue-1;
 }
 
@@ -48,12 +39,23 @@
   color: $dark-grayish-blue;
 }
 
+.red-text {
+  color: $bright-red;
+  transition: 0.7s ease-in-out;
+}
+
+.green-text {
+  color: $lime-green;
+  transition: 0.7s ease-in-out;
+}
+
 .dark {
   .toggle_wrapper:before {
     background-color: $dark-desaturated-blue;
   }
 
-  .bg-1 {
+  .bg-1,
+  &.bg-1 {
     background-color: $very-dark-blue-1;
   }
 
@@ -61,7 +63,7 @@
     background-color: $very-dark-blue-2;
   }
 
-  .all-time.card {
+  .card {
     background-color: $dark-desaturated-blue;
   }
 
@@ -73,7 +75,8 @@
     background-color: $dark-desaturated-blue;
   }
 
-  .text-1 {
+  .text-1,
+  .number-1 {
     color: $white;
   }
 
