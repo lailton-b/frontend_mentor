@@ -1,0 +1,39 @@
+.today {
+  &.container {
+    padding-top: 0;
+  }
+
+  .text-1 {
+    margin-bottom: 28px;
+  }
+}
+
+.small_card {
+  padding: 30px 25px;
+
+  + .small_card {
+    margin-top: 25px;
+  }
+
+  .text-1 {
+    margin-bottom: 26px;
+  }
+
+  .overview,
+  .numbers {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+
+  .result {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 28px 0 1px;
+
+    .text-2 {
+      margin-left: 3px;
+    }
+  }
+}
