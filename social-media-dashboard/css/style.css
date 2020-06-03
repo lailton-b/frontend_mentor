@@ -360,16 +360,6 @@ p {
 
 /* Colors */
 /* Colors */
-.red-text {
-  color: #dc414c;
-  transition: 0.7s ease-in-out;
-}
-
-.green-text {
-  color: #1db489;
-  transition: 0.7s ease-in-out;
-}
-
 .bg-1 {
   background-color: white;
   transition: 0.7s ease-in-out;
@@ -399,7 +389,8 @@ p {
   transition: 0.7s ease-in-out;
 }
 
-.text-1 {
+.text-1,
+.number-1 {
   color: #1e202a;
 }
 
@@ -407,16 +398,26 @@ p {
   color: #63687e;
 }
 
+.red-text {
+  color: #dc414c;
+  transition: 0.7s ease-in-out;
+}
+
+.green-text {
+  color: #1db489;
+  transition: 0.7s ease-in-out;
+}
+
 .dark .toggle_wrapper:before {
   background-color: #252a41;
 }
-.dark .bg-1 {
+.dark .bg-1, .dark.bg-1 {
   background-color: #1e202a;
 }
 .dark .bg-2 {
   background-color: #1f212e;
 }
-.dark .all-time.card {
+.dark .card {
   background-color: #252a41;
 }
 .dark .toggle_wrapper__label_toggle {
@@ -425,7 +426,8 @@ p {
 .dark .toggle_wrapper__label_toggle:after {
   background-color: #252a41;
 }
-.dark .text-1 {
+.dark .text-1,
+.dark .number-1 {
   color: white;
 }
 .dark .text-2 {
@@ -444,10 +446,20 @@ p {
   font-size: 0.875rem;
 }
 
+.number-1 {
+  font-size: 3.375rem;
+  font-weight: bold;
+}
+
+.bg-2 {
+  border-radius: 0px 0px 15px 15px;
+}
+
 .toggle_wrapper {
   display: flex;
   justify-content: space-between;
   padding-top: 50px;
+  padding-bottom: 90px;
   position: relative;
 }
 .toggle_wrapper:before {
@@ -485,6 +497,61 @@ p {
   left: 50%;
   transform: translate(6%, -52%);
   transition: 0.7s ease-in-out;
+}
+
+.all_time .container {
+  position: relative;
+}
+
+.card_bg {
+  padding: 28px 0;
+  border-radius: 5px;
+  text-align: center;
+  position: relative;
+  top: -90px;
+  border-top-width: 4px;
+  border-top-style: solid;
+}
+.card_bg.facebook {
+  border-color: #198ff5;
+}
+.card_bg.twitter {
+  border-color: #1ca0f2;
+}
+.card_bg.instagram:before {
+  content: "";
+  height: 4px;
+  width: 100%;
+  border-radius: 5px 5px 0px 0px;
+  display: block;
+  background-image: linear-gradient(#fdc468, #df4996);
+  position: absolute;
+  top: -4px;
+}
+.card_bg.youtube {
+  border-color: #c4032a;
+}
+.card_bg + .card_bg {
+  margin-top: 25px;
+}
+.card_bg .card_bg__social_media,
+.card_bg .result {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 19px;
+}
+.card_bg .card_bg__social_media .icon,
+.card_bg .result .icon {
+  margin-right: 6px;
+}
+.card_bg .follower {
+  letter-spacing: 0.4rem;
+  font-weight: 300;
+  margin: 2px 0 30px;
+}
+.card_bg .result {
+  margin: 0;
 }
 
 * {
