@@ -1,7 +1,12 @@
+.bg-2 {
+  border-radius: 0px 0px 15px 15px;
+}
+
 .toggle_wrapper {
   display: flex;
   justify-content: space-between;
   padding-top: 50px;
+  padding-bottom: 90px;
   position: relative;
 
   &:before {
