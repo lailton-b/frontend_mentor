@@ -13,44 +13,72 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body>
+<body class="bg-1 dark">
   <header class="container bg-2">
     <h1 class="text-1">Social Media Dashboard</h1>
     <h2 class="text-2">Total Followers: 23,004</h2>
     <div class="toggle_wrapper bg-2">
-      <input type="checkbox" id="toggle_wrapper__toggle" />
+      <input type="checkbox" id="toggle_wrapper__toggle" checked />
       <span class="text-2">Dark Mode</span>
       <label for="toggle_wrapper__toggle" class="toggle_wrapper__label_toggle"></label>
     </div>
   </header>
 
-  Dark Mode
+  <section class="bg-1 all_time">
+    <div class="container">
+      <div class="card card_bg facebook">
+        <div class="card_bg__social_media">
+          <img class="icon" src="images/icon-facebook.svg" alt="Facebook" />
+          <p class="text-2">@nathanf</p>
+        </div>
+        <p class="number-1">1987</p>
+        <p class="text-2 follower">FOLLOWERS</p>
+        <div class="result">
+          <img class="icon" src="images/icon-up.svg" alt="+" />
+          <p class="text-2 green-text">1099 Today</p>
+        </div>
+      </div>
 
+      <div class="card card_bg twitter">
+        <div class="card_bg__social_media">
+          <img class="icon" src="images/icon-twitter.svg" alt="Twitter" />
+          <p class="text-2">@nathanf</p>
+        </div>
+        <p class="number-1">1044</p>
+        <p class="text-2 follower">FOLLOWERS</p>
+        <div class="result">
+          <img class="icon" src="images/icon-up.svg" alt="+" />
+          <p class="text-2 green-text">99 Today</p>
+        </div>
+      </div>
 
+      <div class="card card_bg instagram">
+        <div class="card_bg__social_media">
+          <img class="icon" src="images/icon-instagram.svg" alt="Instagram" />
+          <p class="text-2">@realnathanf</p>
+        </div>
+        <p class="number-1">11k</p>
+        <p class="text-2 follower">FOLLOWERS</p>
+        <div class="result">
+          <img class="icon" src="images/icon-up.svg" alt="+" />
+          <p class="text-2 green-text">1099 Today</p>
+        </div>
+      </div>
 
-  @nathanf
-  1987
-  Followers
-  12 Today
-
-  @nathanf
-  1044
-  Followers
-  99 Today
-
-  @realnathanf
-  11k
-  Followers
-  1099 Today
-
-  Nathan F.
-  8239
-  Subscribers
-  144 Today
-
-
-
-  Overview - Today
+      <div class="card card_bg youtube">
+        <div class="card_bg__social_media">
+          <img class="icon" src="images/icon-youtube.svg" alt="Youtube" />
+          <p class="text-2">Nathan F.</p>
+        </div>
+        <p class="number-1">8239</p>
+        <p class="text-2 follower">SUBSCRIBERS</p>
+        <div class="result">
+          <img class="icon" src="images/icon-down.svg" alt="-" />
+          <p class="text-2 red-text">144 Today</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
   Page Views
   87
