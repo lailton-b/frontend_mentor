@@ -13,6 +13,10 @@
 .card {
   background-color: $light-grayish-blue;
   transition: 0.7s ease-in-out;
+
+  &:hover {
+    background-color: darken($light-grayish-blue, 5%);
+  }
 }
 
 .toggle_wrapper:before {
@@ -31,7 +35,8 @@
 }
 
 .text-1,
-.number-1 {
+.number-1,
+.number-2 {
   color: $very-dark-blue-1;
 }
 
@@ -40,12 +45,12 @@
 }
 
 .red-text {
-  color: $bright-red;
+  color: $bright-red !important;
   transition: 0.7s ease-in-out;
 }
 
 .green-text {
-  color: $lime-green;
+  color: $lime-green !important;
   transition: 0.7s ease-in-out;
 }
 
@@ -65,6 +70,10 @@
 
   .card {
     background-color: $dark-desaturated-blue;
+
+    &:hover {
+      background-color: lighten($dark-desaturated-blue, 5%);
+    }
   }
 
   .toggle_wrapper__label_toggle {
@@ -76,7 +85,8 @@
   }
 
   .text-1,
-  .number-1 {
+  .number-1,
+  .number-2 {
     color: $white;
   }
 
