@@ -5,6 +5,7 @@
 @import "font-size";
 @import "header";
 @import "all_time";
+@import "today";
 
 * {
   font-family: inter;
@@ -13,6 +14,10 @@
 .attribution {
   font-size: 11px;
   text-align: center;
+}
+
+.attribution span {
+  color: $desaturated-blue;
 }
 
 .attribution a {
