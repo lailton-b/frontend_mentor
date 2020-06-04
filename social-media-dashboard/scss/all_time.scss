@@ -96,12 +96,13 @@
 
 @media screen and (min-width: 1125px) {
   .card_bg.youtube {
-    margin: 25px 30px;
+    flex-basis: 500px;
   }
 }
 
-@media screen and (min-width: 1156px) {
+@media screen and (min-width: 1186px) {
   .card_bg.youtube {
-    margin: 25px 0px 0px 30px;
+    flex-basis: 254px;
+    margin-left: 30px;
   }
 }
