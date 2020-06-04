@@ -604,12 +604,13 @@ p {
 }
 @media screen and (min-width: 1125px) {
   .card_bg.youtube {
-    margin: 25px 30px;
+    flex-basis: 500px;
   }
 }
-@media screen and (min-width: 1156px) {
+@media screen and (min-width: 1186px) {
   .card_bg.youtube {
-    margin: 25px 0px 0px 30px;
+    flex-basis: 254px;
+    margin-left: 30px;
   }
 }
 .today {
@@ -665,9 +666,20 @@ p {
     margin: 25px 15px 0;
   }
 }
-@media screen and (min-width: 1156px) {
-  .card_bg.youtube {
-    margin: 25px 0px 0px 30px;
+@media screen and (min-width: 1186px) {
+  .small_card {
+    box-sizing: border-box;
+    max-width: 254px;
+  }
+
+  .card.small_card:nth-child(1),
+.card.small_card:nth-child(5) {
+    margin-left: 0px;
+  }
+
+  .card.small_card:nth-child(4),
+.card.small_card:nth-child(8) {
+    margin-right: 0px;
   }
 }
 * {
