@@ -3,6 +3,10 @@
     padding-top: 0;
   }
 
+  .container {
+    padding: 0;
+  }
+
   .text-1 {
     margin-bottom: 28px;
   }
@@ -35,5 +39,26 @@
     .text-2 {
       margin-left: 3px;
     }
+  }
+}
+
+@media screen and (min-width: 718px) {
+  .today .container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .small_card {
+    flex: 1;
+    flex-basis: 254px;
+    flex-shrink: 0;
+    margin: 25px 15px 0;
+  }
+}
+
+@media screen and (min-width: 1156px) {
+  .card_bg.youtube {
+    margin: 25px 0px 0px 30px;
   }
 }
