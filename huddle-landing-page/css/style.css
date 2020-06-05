@@ -357,16 +357,44 @@ footer .text {
   font-size: 0.875rem;
 }
 
+.title {
+  font-size: 1.5rem;
+  line-height: 2.1rem;
+}
+
+.number {
+  font-size: 3.25rem;
+}
+
+.text {
+  font-size: 0.8125rem;
+  line-height: 1.4rem;
+}
+
+@media screen and (min-width: 1024px) {
+  .title {
+    font-size: 2.1875rem;
+  }
+
+  .number.title {
+    font-size: 3.25rem;
+  }
+
+  .text {
+    font-size: 0.90625rem;
+  }
+}
 :root {
   font-size: 16px;
 }
 
-* {
-  font-family: "Open sans";
-}
-
 .title {
   font-family: poppins;
+}
+
+*,
+.number {
+  font-family: "Open sans";
 }
 
 .container {
@@ -377,13 +405,19 @@ footer .text {
 
 .btn {
   cursor: pointer;
+  outline: none;
+}
+
+.illustration img {
+  display: block;
+  width: 100%;
 }
 
 header .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px;
+  padding: 20px 10px;
 }
 header .btn {
   background-color: transparent;
@@ -392,6 +426,11 @@ header .btn {
   height: 30px;
   border-radius: 18px;
   color: #ff52bf;
+  transition: 0.5s;
+}
+header .btn:hover {
+  box-shadow: 0 0 2px 1px #ff52bf;
+  transition: 0.5s;
 }
 header .logo {
   display: flex;
@@ -411,6 +450,91 @@ header .logo img {
   }
   header .logo img {
     max-width: 180px;
+  }
+}
+@media screen and (min-width: 800px) {
+  .btn:focus {
+    box-shadow: 0 0 2px 1px #ff52bf;
+  }
+}
+.introduction {
+  text-align: center;
+  padding: 100px 0;
+  background-image: url(../images/bg-section-top-desktop-1.svg);
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.introduction .introduction__informations,
+.introduction .introduction__illustration,
+.introduction .introduction__text {
+  max-width: 500px;
+  margin: 0 auto;
+}
+.introduction .introduction__text .title {
+  margin-top: 0px;
+}
+.introduction .introduction__text .text {
+  max-width: 400px;
+  margin: 0 auto;
+}
+.introduction .introduction__text .btn {
+  margin-top: 20px;
+  width: 177px;
+  height: 35px;
+  border: none;
+  border-radius: 22px;
+  color: #f5faff;
+  font-weight: 600;
+  box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.14), 0 2px 2px 0 rgba(0, 0, 0, 0.12), 0 1px 3px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.5s;
+}
+.introduction .introduction__text .btn:focus {
+  box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.14), 0 2px 2px 0 rgba(0, 0, 0, 0.12), 0 1px 3px 0 rgba(0, 0, 0, 0.2), 0 0 3px 2px rgba(0, 0, 0, 0.5);
+}
+.introduction .introduction__text .btn:hover {
+  background-color: #fff;
+  color: #ff52bf;
+  transition: 0.5s;
+}
+.introduction .introduction__illustration {
+  margin-top: 90px;
+}
+.introduction .introduction__informations {
+  margin-bottom: 90px;
+}
+.introduction .introduction__informations .introduction__informations__info {
+  position: relative;
+  margin-top: 90px;
+}
+.introduction .introduction__informations .number {
+  font-weight: 700;
+  margin: 15px 0 20px 0px;
+}
+.introduction .introduction__informations .icon {
+  position: relative;
+  left: -45px;
+  width: 35px;
+  color: #f5faff;
+}
+.introduction .introduction__informations .icon + icon {
+  left: -59px;
+}
+
+@media screen and (min-width: 768px) {
+  .introduction .introduction__informations,
+.introduction .introduction__illustration,
+.introduction .introduction__text {
+    max-width: 752px;
+  }
+  .introduction .introduction__informations {
+    display: flex;
+    justify-content: space-around;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .introduction .introduction__text .text {
+    max-width: 430px;
   }
 }
 .attribution {
