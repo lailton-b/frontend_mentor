@@ -2,12 +2,13 @@
   font-size: 16px;
 }
 
-* {
-  font-family: "Open sans";
-}
-
 .title {
   font-family: poppins;
+}
+
+*,
+.number {
+  font-family: "Open sans";
 }
 
 .container {
@@ -18,4 +19,10 @@
 
 .btn {
   cursor: pointer;
+  outline: none;
+}
+
+.illustration img {
+  display: block;
+  width: 100%;
 }
