@@ -3,7 +3,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px;
+    padding: 20px 10px;
   }
 
   .btn {
@@ -13,6 +13,12 @@ header {
     height: 30px;
     border-radius: 18px;
     color: $color-1;
+    transition: 0.5s;
+
+    &:hover {
+      box-shadow: 0 0 2px 1px #ff52bf;
+      transition: 0.5s;
+    }
   }
 
   .logo {
@@ -39,5 +45,11 @@ header {
     .logo img {
       max-width: 180px;
     }
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .btn:focus {
+    box-shadow: 0 0 2px 1px #ff52bf;
   }
 }
