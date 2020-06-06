@@ -616,7 +616,7 @@ header .logo img {
     flex-direction: row-reverse;
   }
 }
-@media screen and (max-width: 1250px) {
+@media screen and (min-width: 1250px) {
   .characteristic:nth-child(2) {
     padding: 250px 0;
   }
