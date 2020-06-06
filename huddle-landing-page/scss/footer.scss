@@ -1,0 +1,135 @@
+footer {
+  padding: 70px 0 40px 0;
+  position: relative;
+
+  &:before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 4px;
+    position: absolute;
+    top: -2px;
+  }
+
+  .footer__newsletter {
+    margin-bottom: 90px;
+    max-width: 286px;
+    margin: 0 auto 90px auto;
+
+    .title-2 {
+      margin-top: 0px;
+    }
+
+    #email {
+      box-sizing: border-box;
+      width: 286px;
+      padding-left: 15px;
+      height: 43px;
+      border-radius: 5px;
+      border: none;
+      font-weight: 600;
+      outline-color: $color-1;
+    }
+
+    #submit {
+      display: block;
+      font-weight: 600;
+      width: 142px;
+      height: 44px;
+      border: none;
+      border-radius: 5px;
+      margin: 20px 0 0 auto;
+
+      &:focus {
+        box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.14),
+          0 2px 2px 0 rgba(0, 0, 0, 0.12), 0 1px 3px 0 rgba(0, 0, 0, 0.2),
+          0 0 3px 2px rgba(0, 0, 0, 0.5);
+      }
+
+      &:hover {
+        background-color: #fff;
+        color: $color-1;
+        transition: 0.5s;
+      }
+    }
+  }
+
+  .footer__information {
+    max-width: 280px;
+    margin: 0 auto;
+
+    .logo img {
+      max-width: 177px;
+    }
+
+    .phone,
+    .email {
+      display: flex;
+      align-items: center;
+    }
+
+    .phone img,
+    .email img {
+      margin-right: 17px;
+    }
+
+    .phone img {
+      width: 18px;
+      height: 18px;
+    }
+
+    .email img {
+      width: 20px;
+      height: 16px;
+    }
+
+    .social_media {
+      margin-top: 20px;
+      position: relative;
+      left: -5px;
+    }
+
+    .social_media svg {
+      width: 21px;
+      height: 21px;
+      margin-right: 6px;
+    }
+  }
+}
+
+@media screen and (min-width: 750px) {
+  .footer {
+    .container {
+      display: flex;
+      flex-direction: row-reverse;
+    }
+
+    .footer__information .logo {
+      margin-bottom: 24px;
+    }
+
+    .footer__information .social_media {
+      margin-top: 60px;
+    }
+
+    .footer__newsletter {
+      max-width: 386px;
+    }
+
+    .footer__newsletter .text {
+      max-width: 340px;
+    }
+
+    .footer__newsletter #email {
+      margin-top: 23.5px;
+      width: 238px;
+    }
+
+    .footer__newsletter #submit {
+      margin: 0;
+      display: initial;
+      width: 90px;
+      margin-left: 30px;
+    }
+  }
+}
