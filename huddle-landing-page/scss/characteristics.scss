@@ -1,0 +1,72 @@
+.characteristic {
+  padding: 40px 0;
+  text-align: center;
+
+  .container {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+  }
+
+  .characteristic__text {
+    max-width: 400px;
+    margin: 0 auto;
+  }
+
+  .characteristic_illustration {
+    margin-bottom: 80px;
+    max-width: 550px;
+    margin: 0 auto 80px;
+  }
+
+  &:nth-child(2) {
+    padding: 180px 0;
+    background-color: #fff;
+    background-image: url("../images/bg-section-bottom-desktop-2.svg"),
+      url("../images/bg-section-top-desktop-2.svg");
+    background-repeat: no-repeat;
+    background-position: top, bottom;
+    background-size: contain;
+  }
+}
+
+@media screen and (min-width: 550px) and (max-width: 770px) {
+  .characteristic:nth-child(2) {
+    padding: 270px 0;
+  }
+}
+
+@media screen and (max-width: 770px) {
+  .characteristic:nth-child(2) {
+    background-image: url("../images/bg-section-bottom-mobile-2.svg"),
+      url("../images/bg-section-top-mobile-2.svg");
+    background-position: top, bottom;
+  }
+}
+
+@media screen and (min-width: 920px) {
+  .characteristic {
+    text-align: left;
+
+    .container {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .characteristic_illustration {
+      max-width: 400px;
+    }
+
+    .characteristic:nth-child(2) {
+      flex-direction: row-reverse;
+    }
+  }
+}
+
+@media screen and (max-width: 1250px) {
+  .characteristic:nth-child(2) {
+    padding: 250px 0;
+  }
+}
