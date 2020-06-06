@@ -603,6 +603,9 @@ header .logo img {
   .characteristic {
     text-align: left;
   }
+  .characteristic:nth-child(2) .container {
+    flex-direction: row-reverse;
+  }
   .characteristic .container {
     display: flex;
     flex-direction: row;
@@ -611,9 +614,6 @@ header .logo img {
   }
   .characteristic .characteristic_illustration {
     max-width: 400px;
-  }
-  .characteristic .characteristic:nth-child(2) {
-    flex-direction: row-reverse;
   }
 }
 @media screen and (min-width: 1250px) {

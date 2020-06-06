@@ -48,6 +48,10 @@
   .characteristic {
     text-align: left;
 
+    &:nth-child(2) .container {
+      flex-direction: row-reverse;
+    }
+
     .container {
       display: flex;
       flex-direction: row;
@@ -57,10 +61,6 @@
 
     .characteristic_illustration {
       max-width: 400px;
-    }
-
-    .characteristic:nth-child(2) {
-      flex-direction: row-reverse;
     }
   }
 }
