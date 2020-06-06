@@ -7,6 +7,7 @@
 @import "introduction";
 @import "characteristics";
 @import "call_to_action";
+@import "footer";
 
 .attribution {
   font-size: 11px;
@@ -14,5 +15,5 @@
 }
 
 .attribution a {
-  color: hsl(228, 45%, 44%);
+  color: $color-1;
 }
