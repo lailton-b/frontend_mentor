@@ -4,11 +4,16 @@
 }
 
 .title,
-.text {
+.text,
+.title-2 {
   color: $color-2;
 }
 
 footer .title,
 footer .text {
   color: $color-3;
+}
+
+.characteristic {
+  background-color: $color-3;
 }
