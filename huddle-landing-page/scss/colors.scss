@@ -10,10 +10,16 @@
 }
 
 footer .title,
+footer .title-2,
 footer .text {
   color: $color-3;
 }
 
 .characteristic {
   background-color: $color-3;
+}
+
+footer,
+footer:before {
+  background-color: $color-2;
 }
