@@ -1,0 +1,33 @@
+:root {
+  font-size: 16px;
+}
+
+* {
+  font-family: Rubik;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+.container {
+  box-sizing: border-box;
+  padding: 0 15px;
+  max-width: 1165px;
+  margin: 0 auto;
+}
+
+.btn {
+  box-sizing: border-box;
+}
+
+@media screen and (min-width: 767px) {
+  .container {
+    padding: 0 30px;
+  }
+}
