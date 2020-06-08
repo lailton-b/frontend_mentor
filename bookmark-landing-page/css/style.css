@@ -344,7 +344,7 @@ template {
 }
 
 .white_btn {
-  background-color: #fff;
+  background-color: #f7f7f7;
   color: #252b46;
 }
 
@@ -357,6 +357,20 @@ template {
   background-color: #fff;
   border: 2px solid #fa5757;
   transition: color 0.6s;
+}
+
+.blue_btn:hover {
+  border: 2px solid #5368df !important;
+  color: #5368df;
+  background-color: transparent;
+  transition: 0.6s ease-in-out;
+}
+
+.white_btn:hover {
+  border: 2px solid #9194a1 !important;
+  color: #9194a1;
+  background-color: transparent;
+  transition: 0.6s ease-in-out;
 }
 
 .title_1_blue,
@@ -378,6 +392,35 @@ template {
   font-size: 0.875rem;
 }
 
+.title_1_blue {
+  font-size: 1.5rem;
+}
+
+.text,
+.btn {
+  font-size: 0.75rem;
+}
+
+@media screen and (min-width: 359px) {
+  .title_1_blue {
+    font-size: 1.8rem;
+  }
+
+  .text,
+.btn {
+    font-size: 1rem;
+  }
+}
+@media screen and (min-width: 550px) {
+  .title_1_blue {
+    font-size: 2.96875rem;
+  }
+
+  .text,
+.btn {
+    font-size: 1.125rem;
+  }
+}
 :root {
   font-size: 16px;
 }
@@ -390,6 +433,12 @@ a {
   text-decoration: none;
 }
 
+h1,
+h2,
+h3 {
+  font-weight: 500;
+}
+
 ul {
   list-style: none;
   padding: 0;
@@ -398,17 +447,46 @@ ul {
 .container {
   box-sizing: border-box;
   padding: 0 15px;
-  max-width: 1165px;
-  margin: 0 auto;
 }
 
 .btn {
   box-sizing: border-box;
+  border-radius: 5px;
+  box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.14), 0 2px 2px 0 rgba(0, 0, 0, 0.12), 0 1px 3px 0 rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+.blue_btn,
+.white_btn {
+  border: 2px solid transparent;
+  padding: 17px 14px;
+  font-weight: 500;
+  transition: 0.6s ease-in-out;
+}
+
+.illustration img {
+  display: block;
+  width: 100%;
 }
 
 @media screen and (min-width: 767px) {
   .container {
     padding: 0 30px;
+  }
+
+  .blue_btn,
+.white_btn {
+    padding: 17px 24px;
+  }
+}
+@media screen and (min-width: 1100px) {
+  .container {
+    padding: 0 90px;
+  }
+}
+@media screen and (min-width: 1400px) {
+  .container {
+    padding: 0 170px;
   }
 }
 header {
@@ -505,6 +583,105 @@ header .menu__ul li {
   header .orange_btn {
     margin-left: 20px;
     margin-top: 0;
+  }
+}
+.introduction {
+  padding: 36px 0;
+}
+.introduction .container {
+  padding-right: 0px;
+}
+.introduction .introduction__illustration {
+  max-width: 668px;
+  margin: 0 0 20px auto;
+}
+.introduction .introduction__text {
+  max-width: 480px;
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.introduction .introduction__text .title_1_blue {
+  max-width: 300px;
+}
+.introduction .introduction__text .text {
+  max-width: 225px;
+}
+.introduction .introduction__text .introduction__text__buttons {
+  display: flex;
+  margin-top: 18px;
+}
+.introduction .introduction__text .blue_btn {
+  margin-right: 10px;
+}
+
+@media screen and (min-width: 359px) {
+  .introduction .introduction__text .text {
+    max-width: 310px;
+  }
+}
+@media screen and (min-width: 550px) {
+  .introduction .introduction__text .text,
+.introduction .introduction__text .title_1_blue {
+    max-width: 470px;
+  }
+}
+@media screen and (min-width: 767px) {
+  .introduction .introduction__text {
+    max-width: 480px;
+  }
+  .introduction .introduction__text .title_1_blue,
+.introduction .introduction__text .text,
+.introduction .introduction__text .introduction__text__buttons {
+    max-width: 480px;
+  }
+  .introduction .introduction__text .introduction__text__buttons {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+  }
+  .introduction .introduction__text .introduction__text__buttons .btn {
+    width: 215px;
+  }
+
+  .introduction .introduction__illustration {
+    max-width: 668px;
+  }
+}
+@media screen and (max-width: 1199px) {
+  .introduction .container {
+    padding: 0;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .introduction .container {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    position: relative;
+  }
+
+  .introduction .introduction__illustration {
+    margin: 0 0 0 auto;
+  }
+
+  .introduction .introduction__text {
+    text-align: left;
+    margin: 0;
+  }
+  .introduction .introduction__text .title_1_blue {
+    margin-top: 60px;
+  }
+  .introduction .introduction__text .text {
+    margin-top: 0;
+  }
+  .introduction .introduction__text .introduction__text__buttons {
+    justify-content: flex-start;
+  }
+  .introduction .introduction__text .blue_btn {
+    margin-right: 16px;
   }
 }
 .attribution {
