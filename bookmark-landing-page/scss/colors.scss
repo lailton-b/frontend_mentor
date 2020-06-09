@@ -38,8 +38,14 @@
   color: $dark_blue;
 }
 
-.menu_li:hover {
+.title_3_gray {
+  color: $gray;
+}
+
+.menu_li:hover,
+.title_3_gray:hover {
   color: $orange;
+  transition: 0.6s;
 }
 
 .text {
