@@ -24,6 +24,7 @@ ul {
 .container {
   box-sizing: border-box;
   padding: 0 15px;
+  max-width: 1920px;
 }
 
 .btn {
@@ -69,5 +70,11 @@ ul {
 @media screen and (min-width: 1400px) {
   .container {
     padding: 0 170px;
+  }
+}
+
+@media screen and (min-width: 1700px) {
+  .container {
+    padding: 0 350px;
   }
 }
