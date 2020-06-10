@@ -486,6 +486,7 @@ ul {
   box-sizing: border-box;
   padding: 0 15px;
   max-width: 1920px;
+  margin: 0 auto;
 }
 
 .btn {
@@ -889,6 +890,82 @@ header .menu__ul li {
   .features .features__text,
 .features .features__nav {
     padding-left: 170px;
+  }
+}
+.extension {
+  padding-bottom: 118px;
+}
+.extension .extension__text {
+  text-align: center;
+  max-width: 250px;
+  margin: 0 auto;
+}
+.extension .extension__browsers {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.extension .extension__browsers__browser {
+  margin-top: 40px;
+  text-align: center;
+  width: 228px;
+  padding: 40px 0 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 4px 0 #edeef6, 0 4px 4px 0 #edf0f9, 0 4px 5px 0 #ebedf9;
+}
+.extension .extension__browsers__browser .title_2_blue {
+  margin-bottom: 15px;
+}
+.extension .extension__browsers__browser .text {
+  margin: 0 0 30px;
+}
+.extension .extension__browsers__browser .browser__button {
+  padding-top: 23px;
+  background-image: url("../images/bg-dots.svg");
+  background-repeat: no-repeat;
+}
+.extension .extension__browsers__browser .btn {
+  width: 188px;
+  height: 39px;
+  padding: 10px 14px;
+}
+
+@media screen and (min-width: 359px) {
+  .extension .extension__text {
+    max-width: 325px;
+  }
+
+  .extension .extension__browsers__browser {
+    width: 280px;
+  }
+  .extension .extension__browsers__browser .btn {
+    width: 238px;
+    height: 48px;
+    padding: 10px 14px;
+  }
+}
+@media screen and (min-width: 767px) {
+  .extension .extension__text {
+    max-width: 520px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .extension .extension__browsers {
+    margin-top: 60px;
+    flex-direction: row;
+    max-width: 912px;
+    height: 430px;
+    justify-content: space-between;
+    margin: 60px auto 0;
+  }
+  .extension .extension__browsers .extension__browsers__browser {
+    margin-top: 0;
+  }
+  .extension .extension__browsers .extension__browsers__browser:first-child {
+    align-self: flex-start;
+  }
+  .extension .extension__browsers .extension__browsers__browser:last-child {
+    align-self: flex-end;
   }
 }
 .attribution {
