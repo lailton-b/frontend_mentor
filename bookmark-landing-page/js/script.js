@@ -5,7 +5,7 @@ const menuUl = document.querySelector(".menu__ul");
 
 menuHamburger.addEventListener("click", () => menuUl.classList.toggle("open"));
 
-/* Tab navigation */
+/* Features tab navigation */
 
 const featuresLi = document.querySelectorAll(".features__nav li");
 const features = document.querySelectorAll(".features__feature");
@@ -34,3 +34,15 @@ function tabNavigation(index) {
 featuresLi.forEach((li, index) => {
   li.addEventListener("click", () => tabNavigation(index));
 });
+
+/* Faq tab navigation */
+
+const questions = document.querySelectorAll(".faq__question");
+
+function handleQuestion() {
+  this.classList.toggle("active");
+}
+
+questions.forEach((question) =>
+  question.addEventListener("click", handleQuestion),
+);
