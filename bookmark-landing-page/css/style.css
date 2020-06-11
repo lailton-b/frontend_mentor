@@ -993,40 +993,49 @@ header .menu__ul li {
   border-bottom: 1px solid #e5e5e5;
   cursor: pointer;
 }
-.faq .faq__question:first-child .faq__question__title {
+.faq .faq__question .faq__question__title:hover > .title_3_blue {
+  color: #fa5757;
+  transition: 0.6s;
+}
+.faq .faq__question .faq__question__title:first-child .faq__question__title {
   border: 1px solid #e5e5e5;
   border-left: none;
   border-right: none;
 }
-.faq .faq__question .faq__question__title .title_3_blue {
+.faq .faq__question .faq__question__title .faq__question__title .title_3_blue {
   margin: 0;
+  transition: 0.6s;
 }
-.faq .faq__question .faq__question__answer {
+.faq .faq__question .faq__question__title .faq__question__title .title_3_blue:hover {
+  color: #fa5757;
+  transition: 0.6s;
+}
+.faq .faq__question .faq__question__title .faq__question__answer {
   opacity: 0;
   transition: 0.5s ease;
   padding: 0 5px;
 }
-.faq .faq__question .faq__question__title svg {
+.faq .faq__question .faq__question__title .faq__question__title svg {
   transform: rotate(0deg);
 }
-.faq .faq__question .faq__question__title svg,
-.faq .faq__question .faq__question__title svg path {
+.faq .faq__question .faq__question__title .faq__question__title svg,
+.faq .faq__question .faq__question__title .faq__question__title svg path {
   transition: 0.5s ease;
 }
-.faq .faq__question.active {
+.faq .faq__question .faq__question__title.active {
   max-height: 500px;
   transition: 0.5s ease;
 }
-.faq .faq__question.active .faq__question__title {
+.faq .faq__question .faq__question__title.active .faq__question__title {
   border-bottom: #fff;
 }
-.faq .faq__question.active > .faq__question__title svg {
+.faq .faq__question .faq__question__title.active > .faq__question__title svg {
   transform: rotate(180deg);
 }
-.faq .faq__question.active > .faq__question__title svg path {
+.faq .faq__question .faq__question__title.active > .faq__question__title svg path {
   stroke: #fa5757;
 }
-.faq .faq__question.active > .faq__question__answer {
+.faq .faq__question .faq__question__title.active > .faq__question__answer {
   margin-top: 29px;
   opacity: 1;
   transition: 0.5s ease;
