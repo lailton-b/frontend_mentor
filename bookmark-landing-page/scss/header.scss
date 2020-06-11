@@ -1,5 +1,6 @@
 header {
   padding: 33px 0;
+  transition: background-color 0.6s;
 
   .container {
     display: flex;
@@ -14,32 +15,11 @@ header {
     height: 0vh;
     opacity: 0;
     overflow: hidden;
-    position: absolute;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
     position: absolute;
     left: 0;
-    background-color: #fff;
-    transition: 0.6s ease-in-out;
-
-    div,
-    li {
-      transform: scale(0);
-      transition: 0.2s ease-in-out;
-    }
-
-    &.open {
-      opacity: 1;
-      height: 50vh;
-      transition: 0.6s ease-in-out;
-
-      div,
-      li {
-        transform: scale(1) !important;
-        transition: 0.3s ease-in-out;
-      }
-    }
+    transition: height 0.6s ease-in-out, opacity 0.6s ease-in-out;
   }
 
   .menu_li,
@@ -68,6 +48,116 @@ header {
     border: none;
     outline: none;
     cursor: pointer;
+  }
+
+  .menu__hamburger__close,
+  .menu__social {
+    display: none;
+  }
+
+  .menu__social {
+    position: absolute;
+    bottom: 200px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  body.open {
+    overflow: hidden;
+  }
+
+  header {
+    transition: 0.6s 0.2s;
+  }
+
+  .open header {
+    background-color: rgba(37, 43, 70, 0.95);
+    transition: 0.6s;
+
+    .logo svg {
+      .logo__name path {
+        fill: $white;
+      }
+
+      .logo__icon circle {
+        fill: $white;
+      }
+
+      .logo__icon path {
+        fill: rgba(37, 43, 70, 0.95);
+      }
+    }
+
+    .menu__hamburger__close,
+    .menu__social {
+      display: block;
+    }
+
+    .menu__hamburger__open {
+      display: none;
+    }
+
+    .menu__social {
+      img:first-child {
+        margin-right: 40px;
+      }
+    }
+  }
+
+  header .menu__ul {
+    height: 0vh;
+    justify-content: flex-start;
+    margin-top: 33px;
+    padding-top: 30px;
+    opacity: 1;
+    transition: 0.6s ease-in-out;
+
+    div {
+      li {
+        border-bottom: none;
+        width: 308px;
+        padding: 10px 0;
+      }
+
+      li:first-child {
+        border-top: none;
+      }
+
+      .menu_li {
+        color: #fff;
+        font-size: 20px;
+        width: auto;
+      }
+    }
+
+    .btn {
+      width: 308px;
+      background-color: transparent;
+      border: 2px solid #fff;
+      font-size: 20px;
+      height: 48px;
+    }
+  }
+
+  header .open.menu__ul {
+    height: 100vh;
+    background-color: rgba(37, 43, 70, 0.95);
+    justify-content: flex-start;
+    margin-top: 33px;
+    opacity: 1;
+    transition: 0.6s ease-in-out 0.2s;
+
+    div {
+      li {
+        border-bottom: 1px solid #444b68;
+        transition: 0.2s 0.7s;
+      }
+
+      li:first-child {
+        border-top: 1px solid #444b68;
+        transition: 0.2s 0.7s;
+      }
+    }
   }
 }
 
