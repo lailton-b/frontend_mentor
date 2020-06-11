@@ -2,8 +2,12 @@
 
 const menuHamburger = document.querySelector(".menu__hamburger");
 const menuUl = document.querySelector(".menu__ul");
+const body = document.querySelector("body");
 
-menuHamburger.addEventListener("click", () => menuUl.classList.toggle("open"));
+menuHamburger.addEventListener("click", () => {
+  menuUl.classList.toggle("open");
+  body.classList.toggle("open");
+});
 
 /* Features tab navigation */
 
