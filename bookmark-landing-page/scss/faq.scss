@@ -1,0 +1,129 @@
+.faq {
+  padding-bottom: 149px;
+
+  .faq__text {
+    text-align: center;
+    max-width: 250px;
+    margin: 0 auto 52px;
+  }
+
+  .faq__questions {
+    max-width: 537px;
+    margin: 0 auto;
+  }
+
+  .faq__question {
+    max-height: 75px;
+    transition: 0.5s ease;
+    overflow: hidden;
+
+    .faq__question__title {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 23px 5px;
+      border-bottom: 1px solid #e5e5e5;
+      cursor: pointer;
+    }
+
+    &:first-child .faq__question__title {
+      border: 1px solid #e5e5e5;
+      border-left: none;
+      border-right: none;
+    }
+
+    .faq__question__title .title_3_blue {
+      margin: 0;
+    }
+
+    .faq__question__answer {
+      opacity: 0;
+      transition: 0.5s ease;
+      padding: 0 5px;
+    }
+
+    .faq__question__title svg {
+      transform: rotate(0deg);
+    }
+
+    .faq__question__title svg,
+    .faq__question__title svg path {
+      transition: 0.5s ease;
+    }
+
+    &.active {
+      max-height: 500px;
+      transition: 0.5s ease;
+
+      .faq__question__title {
+        border-bottom: #fff;
+      }
+    }
+
+    &.active > .faq__question__title svg {
+      transform: rotate(180deg);
+
+      path {
+        stroke: $orange;
+      }
+    }
+
+    &.active > .faq__question__answer {
+      margin-top: 29px;
+      opacity: 1;
+      transition: 0.5s ease;
+    }
+  }
+
+  .btn {
+    display: block;
+    margin: 50px auto 0;
+  }
+}
+
+@media screen and (max-width: 326px) {
+  .faq__question:nth-child(2) {
+    max-height: 83px;
+  }
+}
+
+@media screen and (min-width: 359px) {
+  .faq {
+    .faq__text {
+      max-width: 325px;
+    }
+    .faq__questions {
+      max-width: 345px;
+    }
+  }
+}
+
+@media screen and (max-width: 359px) {
+  .faq__question:last-child {
+    max-height: 83px;
+  }
+}
+
+@media screen and (max-width: 766px) and (min-width: 359px) {
+  .faq__question:nth-child(2),
+  .faq__question:last-child {
+    max-height: 95px;
+  }
+}
+
+@media screen and (max-width: 766px) {
+  .faq .faq__question:first-child .faq__question__title {
+    border-top: none;
+  }
+}
+
+@media screen and (min-width: 767px) {
+  .faq {
+    .faq__text {
+      max-width: 520px;
+    }
+    .faq__questions {
+      max-width: 540px;
+    }
+  }
+}
