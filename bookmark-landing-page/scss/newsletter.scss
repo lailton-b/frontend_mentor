@@ -2,6 +2,10 @@
   background-color: $blue;
   padding: 73px 0;
 
+  .title_2_white {
+    margin-bottom: 40px;
+  }
+
   .text {
     letter-spacing: 0.2rem;
   }
@@ -76,6 +80,10 @@
     }
 
     .valid {
+      ~ .submit_email {
+        margin-top: 13px;
+      }
+
       &:after {
         content: "Thanks for signing up!";
         opacity: 1;
@@ -96,6 +104,10 @@
 
     .invalid {
       animation: shake 0.6s ease-in forwards;
+
+      ~ .submit_email {
+        margin-top: 13px;
+      }
 
       &:after {
         content: "Whoops, make sure it's an email";
@@ -147,7 +159,7 @@
     }
 
     .btn {
-      margin: 13px auto 0;
+      margin: 0px auto 0;
     }
 
     .btn:hover {
@@ -195,6 +207,13 @@
       height: 49px;
       box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.14), 0 2px 2px 0 rgba(0, 0, 0, 0.12),
         0 1px 3px 0 rgba(0, 0, 0, 0.2);
+    }
+
+    .valid,
+    .invalid {
+      ~ .submit_email {
+        margin-top: 0px;
+      }
     }
 
     .btn {
