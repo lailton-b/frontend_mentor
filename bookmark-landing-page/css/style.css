@@ -486,6 +486,13 @@ input:focus {
 a {
   text-decoration: none;
 }
+a:focus {
+  outline: none;
+  border-bottom: 2px solid #252b46;
+}
+a.btn:focus {
+  border: 2px solid #5368df;
+}
 
 h1,
 h2,
@@ -1285,6 +1292,84 @@ header .menu__ul li {
     height: 50px;
     margin: 0;
     padding: 0;
+  }
+}
+footer {
+  background-color: #fa5757;
+}
+footer .text {
+  color: #252b46;
+}
+footer p {
+  margin: 0;
+}
+
+.footer {
+  text-align: center;
+  padding: 32px 0;
+  background-color: #252b46;
+}
+.footer a {
+  display: block;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.6s;
+}
+.footer a:hover {
+  color: #fa5757;
+}
+.footer ul {
+  margin: 0;
+}
+.footer .nav__group_1 svg {
+  margin-bottom: 30px;
+}
+.footer .nav__group_1 li + li {
+  margin-top: 30px;
+}
+.footer .nav__group_2 ul {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+.footer .nav__group_2 ul svg path {
+  transition: 0.6s;
+}
+.footer .nav__group_2 ul svg:hover > path {
+  fill: #fa5757;
+}
+.footer .nav__group_2 ul .fb {
+  margin-right: 30px;
+}
+
+@media screen and (min-width: 1200px) {
+  .footer {
+    padding: 30px 0 30px;
+  }
+  .footer .footer__nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1111px;
+    margin: 0 auto;
+  }
+  .footer .nav__group_1 {
+    display: flex;
+  }
+  .footer .nav__group_1 ul {
+    display: flex;
+  }
+  .footer .nav__group_1 li {
+    margin-left: 30px;
+  }
+  .footer .nav__group_1 li + li {
+    margin-top: 0;
+  }
+  .footer .nav__group_1 svg {
+    margin: 0;
+  }
+  .footer .nav__group_2 ul {
+    margin-top: 0;
   }
 }
 .attribution {
