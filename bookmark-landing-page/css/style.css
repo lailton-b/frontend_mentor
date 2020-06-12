@@ -428,9 +428,19 @@ input:focus {
   font-weight: 400;
 }
 
-.text,
-.btn {
+.text {
   font-size: 0.75rem;
+}
+
+.btn,
+.menu_li,
+li .text {
+  font-size: 0.8125rem;
+}
+
+.menu_li,
+li .text {
+  letter-spacing: 0.1rem;
 }
 
 .text {
@@ -451,8 +461,7 @@ input:focus {
     font-size: 1.25rem;
   }
 
-  .text,
-.btn {
+  .text {
     font-size: 1rem;
   }
 
@@ -470,8 +479,7 @@ input:focus {
     font-size: 1.8rem;
   }
 
-  .text,
-.btn {
+  .text {
     font-size: 1.125rem;
   }
 }
@@ -517,6 +525,7 @@ ul {
   border-radius: 5px;
   box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.14), 0 2px 2px 0 rgba(0, 0, 0, 0.12), 0 1px 3px 0 rgba(0, 0, 0, 0.2);
   cursor: pointer;
+  text-align: center;
 }
 
 .blue_btn,
@@ -552,9 +561,19 @@ ul {
     padding: 0 170px;
   }
 }
-@media screen and (min-width: 1700px) {
+@media screen and (min-width: 1550px) {
   .container {
     padding: 0 350px;
+  }
+}
+@media screen and (min-width: 1700px) {
+  .container {
+    padding: 0 450px;
+  }
+}
+@media screen and (min-width: 1919px) {
+  .container {
+    padding: 0 500px;
   }
 }
 header {
@@ -904,7 +923,6 @@ header .menu__ul li {
   display: none;
   width: 134px;
   height: 49px;
-  padding: 13px 24px;
 }
 .features .features__feature__text .text {
   margin-bottom: 30px;
@@ -979,7 +997,9 @@ header .menu__ul li {
     text-align: left;
   }
   .features .features__feature__text .blue_btn {
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
   .features .features__feature__text .text {
     max-width: 435px;
@@ -989,6 +1009,24 @@ header .menu__ul li {
   .features .features__text,
 .features .features__nav {
     padding-left: 170px;
+  }
+}
+@media screen and (min-width: 1550px) {
+  .features .features__text,
+.features .features__nav {
+    padding-left: 350px;
+  }
+}
+@media screen and (min-width: 1700px) {
+  .features .features__text,
+.features .features__nav {
+    padding-left: 450px;
+  }
+}
+@media screen and (min-width: 1919px) {
+  .features .features__text,
+.features .features__nav {
+    padding-left: 500px;
   }
 }
 .extension {
@@ -1010,7 +1048,7 @@ header .menu__ul li {
   width: 228px;
   padding: 40px 0 20px;
   border-radius: 10px;
-  box-shadow: 0 4px 4px 0 #edeef6, 0 4px 4px 0 #edf0f9, 0 4px 5px 0 #ebedf9;
+  box-shadow: 0 4px 8px 2px #edeef6, 0 4px 8px 2px #edf0f9, 0 4px 8px 2px #ebedf9;
 }
 .extension .extension__browsers__browser .title_2_blue {
   margin-bottom: 15px;
@@ -1204,7 +1242,12 @@ header .menu__ul li {
   width: 250px;
   margin: 0 auto;
 }
-.newsletter .newsletter__form .email_wrapper .error {
+.newsletter .newsletter__form .email_wrapper .ok {
+  width: 28px;
+  height: 28px;
+}
+.newsletter .newsletter__form .email_wrapper .error,
+.newsletter .newsletter__form .email_wrapper .ok {
   position: absolute;
   right: 15px;
   top: 34%;
@@ -1214,20 +1257,22 @@ header .menu__ul li {
   transition: opacity 0.3s;
 }
 .newsletter .newsletter__form .email_wrapper:after {
+  content: "";
   box-sizing: border-box;
   position: relative;
   top: -2px;
   display: flex;
   align-items: center;
   width: 100%;
-  height: 0px;
+  height: 25px;
   overflow: hidden;
   padding-left: 10px;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
   color: #fff;
   font-style: italic;
-  transition: height 0.3s;
+  opacity: 0;
+  transition: 0.6s;
 }
 .newsletter .newsletter__form .email,
 .newsletter .newsletter__form .btn {
@@ -1238,15 +1283,31 @@ header .menu__ul li {
   border-radius: 5px;
   border: 2px solid transparent;
 }
+.newsletter .newsletter__form .btn {
+  transition: 0.6s;
+}
 .newsletter .newsletter__form .valid:after {
   content: "Thanks for signing up!";
-  height: 25px;
+  opacity: 1;
   background-color: #67c6d8;
+  transition: 0.6s;
+}
+.newsletter .newsletter__form .valid .email {
+  border: 2px solid #67c6d8;
+  padding: 0 48px 0 20px;
+}
+.newsletter .newsletter__form .valid .ok {
+  opacity: 1;
+  transition: opacity 0.6s;
+}
+.newsletter .newsletter__form .invalid {
+  animation: shake 0.6s ease-in forwards;
 }
 .newsletter .newsletter__form .invalid:after {
   content: "Whoops, make sure it's an email";
-  height: 25px;
+  opacity: 1;
   background-color: #fa5757;
+  transition: 0.6s;
 }
 .newsletter .newsletter__form .invalid .email {
   border: 2px solid #fa5757;
@@ -1254,10 +1315,24 @@ header .menu__ul li {
 }
 .newsletter .newsletter__form .invalid .error {
   opacity: 1;
-  transition: opacity 0.3s;
+  transition: opacity 0.6s;
+}
+@keyframes shake {
+  0%, 10%, 20%, 30%, 40%, 50%, 60%, 70%, 80%, 90%, 100% {
+    transform: translateY(0px);
+  }
+  5%, 35%, 65%, 95% {
+    transform: translateY(5px);
+  }
+  15%, 45%, 75% {
+    transform: translateX(5px);
+  }
+  25%, 55%, 85% {
+    transform: translateX(-5px);
+  }
 }
 .newsletter .newsletter__form .btn {
-  margin-top: 13px;
+  margin: 13px auto 0;
 }
 .newsletter .newsletter__form .btn:hover {
   border: 2px solid #fa5757;
@@ -1303,8 +1378,12 @@ header .menu__ul li {
 footer {
   background-color: #fa5757;
 }
-footer .text {
+footer .attribution .text {
   color: #252b46;
+  font-size: 13px;
+}
+footer .attribution .text.white {
+  color: #fff;
 }
 footer p {
   margin: 0;
@@ -1346,6 +1425,9 @@ footer p {
 }
 .footer .nav__group_2 ul .fb {
   margin-right: 30px;
+}
+.footer .nav__group_2 ul .tt {
+  margin-top: 2px;
 }
 
 @media screen and (min-width: 1200px) {
