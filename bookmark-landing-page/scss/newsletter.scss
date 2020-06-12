@@ -25,7 +25,13 @@
       width: 250px;
       margin: 0 auto;
 
-      .error {
+      .ok {
+        width: 28px;
+        height: 28px;
+      }
+
+      .error,
+      .ok {
         position: absolute;
         right: 15px;
         top: 34%;
@@ -37,20 +43,22 @@
     }
 
     .email_wrapper:after {
+      content: "";
       box-sizing: border-box;
       position: relative;
       top: -2px;
       display: flex;
       align-items: center;
       width: 100%;
-      height: 0px;
+      height: 25px;
       overflow: hidden;
       padding-left: 10px;
       border-bottom-left-radius: 5px;
       border-bottom-right-radius: 5px;
       color: $white;
       font-style: italic;
-      transition: height 0.3s;
+      opacity: 0;
+      transition: 0.6s;
     }
 
     .email,
@@ -63,17 +71,37 @@
       border: 2px solid transparent;
     }
 
-    .valid:after {
-      content: "Thanks for signing up!";
-      height: 25px;
-      background-color: #67c6d8;
+    .btn {
+      transition: 0.6s;
+    }
+
+    .valid {
+      &:after {
+        content: "Thanks for signing up!";
+        opacity: 1;
+        background-color: #67c6d8;
+        transition: 0.6s;
+      }
+
+      .email {
+        border: 2px solid #67c6d8;
+        padding: 0 48px 0 20px;
+      }
+
+      .ok {
+        opacity: 1;
+        transition: opacity 0.6s;
+      }
     }
 
     .invalid {
+      animation: shake 0.6s ease-in forwards;
+
       &:after {
         content: "Whoops, make sure it's an email";
-        height: 25px;
+        opacity: 1;
         background-color: $orange;
+        transition: 0.6s;
       }
 
       .email {
@@ -82,12 +110,44 @@
       }
       .error {
         opacity: 1;
-        transition: opacity 0.3s;
+        transition: opacity 0.6s;
+      }
+
+      @keyframes shake {
+        0%,
+        10%,
+        20%,
+        30%,
+        40%,
+        50%,
+        60%,
+        70%,
+        80%,
+        90%,
+        100% {
+          transform: translateY(0px);
+        }
+        5%,
+        35%,
+        65%,
+        95% {
+          transform: translateY(5px);
+        }
+        15%,
+        45%,
+        75% {
+          transform: translateX(5px);
+        }
+        25%,
+        55%,
+        85% {
+          transform: translateX(-5px);
+        }
       }
     }
 
     .btn {
-      margin-top: 13px;
+      margin: 13px auto 0;
     }
 
     .btn:hover {
