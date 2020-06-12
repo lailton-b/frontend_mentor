@@ -1,0 +1,141 @@
+.newsletter {
+  background-color: $blue;
+  padding: 73px 0;
+
+  .text {
+    letter-spacing: 0.2rem;
+  }
+
+  .newsletter__form {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+
+  .newsletter__text,
+  .newsletter__form {
+    text-align: center;
+    max-width: 250px;
+    margin: 0 auto;
+  }
+
+  .newsletter__form {
+    .email_wrapper {
+      position: relative;
+      width: 250px;
+      margin: 0 auto;
+
+      .error {
+        position: absolute;
+        right: 15px;
+        top: 34%;
+        transform: translateY(-50%);
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.3s;
+      }
+    }
+
+    .email_wrapper:after {
+      box-sizing: border-box;
+      content: "Whoops, make sure it's an email";
+      position: relative;
+      top: -2px;
+      display: flex;
+      align-items: center;
+      width: 100%;
+      height: 0px;
+      overflow: hidden;
+      padding-left: 10px;
+      background-color: $orange;
+      border-bottom-left-radius: 5px;
+      border-bottom-right-radius: 5px;
+      color: $white;
+      font-style: italic;
+      transition: height 0.3s;
+    }
+
+    .email,
+    .btn {
+      box-sizing: border-box;
+      padding: 0 20px;
+      width: 250px;
+      height: 42px;
+      border-radius: 5px;
+      border: 2px solid transparent;
+    }
+
+    .invalid {
+      &:after {
+        height: 25px;
+      }
+
+      .email {
+        border: 2px solid $orange;
+        padding: 0 48px 0 20px;
+      }
+      .error {
+        opacity: 1;
+        transition: opacity 0.3s;
+      }
+    }
+
+    .btn {
+      margin-top: 13px;
+    }
+
+    .btn:hover {
+      border: 2px solid $orange;
+    }
+  }
+}
+
+@media screen and (min-width: 359px) {
+  .newsletter {
+    .newsletter__text,
+    .newsletter__form {
+      max-width: 325px;
+    }
+  }
+
+  .newsletter .newsletter__form {
+    .email,
+    .email_wrapper,
+    .btn {
+      width: 270px;
+    }
+  }
+}
+
+@media screen and (min-width: 767px) {
+  .newsletter {
+    .title_2_white {
+      margin-top: 40px;
+    }
+
+    .newsletter__text,
+    .newsletter__form {
+      max-width: 520px;
+    }
+  }
+
+  .newsletter .newsletter__form {
+    .email_wrapper {
+      width: 300px;
+      margin: 0;
+    }
+    .email {
+      width: 300px;
+      height: 49px;
+      box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.14), 0 2px 2px 0 rgba(0, 0, 0, 0.12),
+        0 1px 3px 0 rgba(0, 0, 0, 0.2);
+    }
+
+    .btn {
+      width: 125px;
+      height: 50px;
+      margin: 0;
+      padding: 0;
+    }
+  }
+}
