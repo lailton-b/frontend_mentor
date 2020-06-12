@@ -338,6 +338,10 @@ template {
   display: none;
 }
 
+.btn:focus {
+  outline-color: #fa5757;
+}
+
 .blue_btn {
   background-color: #5368df;
   color: #fff;
@@ -373,11 +377,23 @@ template {
   transition: 0.6s ease-in-out;
 }
 
+input:focus {
+  outline-color: #5368df;
+}
+
 .title_1_blue,
 .title_2_blue,
 .title_3_blue,
 .menu_li {
   color: #252b46;
+}
+
+.title_2_white {
+  color: #fff;
+}
+
+.text.white {
+  color: #fff;
 }
 
 .title_3_gray {
@@ -1067,48 +1083,48 @@ header .menu__ul li {
   color: #fa5757;
   transition: 0.6s;
 }
-.faq .faq__question .faq__question__title:first-child .faq__question__title {
+.faq .faq__question:first-child .faq__question__title {
   border: 1px solid #e5e5e5;
   border-left: none;
   border-right: none;
 }
-.faq .faq__question .faq__question__title .faq__question__title .title_3_blue {
+.faq .faq__question .faq__question__title .title_3_blue {
   margin: 0;
-  transition: 0.6s;
+  transition: 0.6s ease-in-out;
 }
-.faq .faq__question .faq__question__title .faq__question__title .title_3_blue:hover {
+.faq .faq__question .faq__question__title .title_3_blue:hover {
   color: #fa5757;
-  transition: 0.6s;
+  transition: 0.6s ease-in-out;
 }
-.faq .faq__question .faq__question__title .faq__question__answer {
+.faq .faq__question .faq__question__answer {
   opacity: 0;
-  transition: 0.5s ease;
+  transition: 0.5s ease-in-out;
   padding: 0 5px;
 }
-.faq .faq__question .faq__question__title .faq__question__title svg {
+.faq .faq__question .faq__question__title svg {
   transform: rotate(0deg);
 }
-.faq .faq__question .faq__question__title .faq__question__title svg,
-.faq .faq__question .faq__question__title .faq__question__title svg path {
-  transition: 0.5s ease;
+.faq .faq__question .faq__question__title svg,
+.faq .faq__question .faq__question__title svg path {
+  transition: 0.5s ease-in-out;
 }
-.faq .faq__question .faq__question__title.active {
+.faq .faq__question.active {
   max-height: 500px;
-  transition: 0.5s ease;
+  transition: 0.5s ease-in-out;
 }
-.faq .faq__question .faq__question__title.active .faq__question__title {
+.faq .faq__question.active .faq__question__title {
   border-bottom: #fff;
 }
-.faq .faq__question .faq__question__title.active > .faq__question__title svg {
+.faq .faq__question.active > .faq__question__title svg {
   transform: rotate(180deg);
 }
-.faq .faq__question .faq__question__title.active > .faq__question__title svg path {
+.faq .faq__question.active > .faq__question__title svg path {
   stroke: #fa5757;
 }
-.faq .faq__question .faq__question__title.active > .faq__question__answer {
+.faq .faq__question.active > .faq__question__answer {
   margin-top: 29px;
   opacity: 1;
-  transition: 0.5s ease;
+  transition: 0.5s ease-in-out;
 }
 .faq .btn {
   display: block;
@@ -1150,6 +1166,125 @@ header .menu__ul li {
   }
   .faq .faq__questions {
     max-width: 540px;
+  }
+}
+.newsletter {
+  background-color: #5368df;
+  padding: 73px 0;
+}
+.newsletter .text {
+  letter-spacing: 0.2rem;
+}
+.newsletter .newsletter__form {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.newsletter .newsletter__text,
+.newsletter .newsletter__form {
+  text-align: center;
+  max-width: 250px;
+  margin: 0 auto;
+}
+.newsletter .newsletter__form .email_wrapper {
+  position: relative;
+  width: 250px;
+  margin: 0 auto;
+}
+.newsletter .newsletter__form .email_wrapper .error {
+  position: absolute;
+  right: 15px;
+  top: 34%;
+  transform: translateY(-50%);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s;
+}
+.newsletter .newsletter__form .email_wrapper:after {
+  box-sizing: border-box;
+  position: relative;
+  top: -2px;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 0px;
+  overflow: hidden;
+  padding-left: 10px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  color: #fff;
+  font-style: italic;
+  transition: height 0.3s;
+}
+.newsletter .newsletter__form .email,
+.newsletter .newsletter__form .btn {
+  box-sizing: border-box;
+  padding: 0 20px;
+  width: 250px;
+  height: 42px;
+  border-radius: 5px;
+  border: 2px solid transparent;
+}
+.newsletter .newsletter__form .valid:after {
+  content: "Thanks for signing up!";
+  height: 25px;
+  background-color: #67c6d8;
+}
+.newsletter .newsletter__form .invalid:after {
+  content: "Whoops, make sure it's an email";
+  height: 25px;
+  background-color: #fa5757;
+}
+.newsletter .newsletter__form .invalid .email {
+  border: 2px solid #fa5757;
+  padding: 0 48px 0 20px;
+}
+.newsletter .newsletter__form .invalid .error {
+  opacity: 1;
+  transition: opacity 0.3s;
+}
+.newsletter .newsletter__form .btn {
+  margin-top: 13px;
+}
+.newsletter .newsletter__form .btn:hover {
+  border: 2px solid #fa5757;
+}
+
+@media screen and (min-width: 359px) {
+  .newsletter .newsletter__text,
+.newsletter .newsletter__form {
+    max-width: 325px;
+  }
+
+  .newsletter .newsletter__form .email,
+.newsletter .newsletter__form .email_wrapper,
+.newsletter .newsletter__form .btn {
+    width: 270px;
+  }
+}
+@media screen and (min-width: 767px) {
+  .newsletter .title_2_white {
+    margin-top: 40px;
+  }
+  .newsletter .newsletter__text,
+.newsletter .newsletter__form {
+    max-width: 444px;
+  }
+
+  .newsletter .newsletter__form .email_wrapper {
+    width: 300px;
+    margin: 0;
+  }
+  .newsletter .newsletter__form .email {
+    width: 300px;
+    height: 49px;
+    box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.14), 0 2px 2px 0 rgba(0, 0, 0, 0.12), 0 1px 3px 0 rgba(0, 0, 0, 0.2);
+  }
+  .newsletter .newsletter__form .btn {
+    width: 125px;
+    height: 50px;
+    margin: 0;
+    padding: 0;
   }
 }
 .attribution {
