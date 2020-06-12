@@ -50,3 +50,29 @@ function handleQuestion() {
 questions.forEach((question) =>
   question.addEventListener("click", handleQuestion),
 );
+
+/* Email check validity */
+
+const submit = document.querySelector("input[type='submit']");
+const email = document.querySelector(".email");
+const emailWrapper = document.querySelector(".email_wrapper");
+
+function checkValidity() {
+  event.preventDefault();
+  emailWrapper.classList.remove("invalid");
+  emailWrapper.classList.remove("valid");
+
+  if (!email.checkValidity()) {
+    emailWrapper.classList.add("invalid");
+  } else {
+    emailWrapper.classList.add("valid");
+  }
+}
+
+function removeNote() {
+  emailWrapper.classList.remove("invalid");
+  emailWrapper.classList.remove("valid");
+}
+
+submit.addEventListener("click", checkValidity);
+email.addEventListener("click", removeNote);
