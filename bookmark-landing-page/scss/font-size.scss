@@ -16,9 +16,19 @@
   font-weight: 400;
 }
 
-.text,
-.btn {
+.text {
   font-size: 0.75rem;
+}
+
+.btn,
+.menu_li,
+li .text {
+  font-size: 0.8125rem;
+}
+
+.menu_li,
+li .text {
+  letter-spacing: 0.1rem;
 }
 
 .text {
@@ -39,8 +49,7 @@
     font-size: 1.25rem;
   }
 
-  .text,
-  .btn {
+  .text {
     font-size: 1rem;
   }
 
@@ -59,8 +68,7 @@
     font-size: 1.8rem;
   }
 
-  .text,
-  .btn {
+  .text {
     font-size: 1.125rem;
   }
 }
