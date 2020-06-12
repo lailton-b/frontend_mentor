@@ -112,7 +112,7 @@ header {
     opacity: 1;
     transition: 0.6s ease-in-out;
 
-    div {
+    .li_wrapper {
       li {
         border-bottom: none;
         width: 308px;
@@ -147,7 +147,7 @@ header {
     opacity: 1;
     transition: 0.6s ease-in-out 0.2s;
 
-    div {
+    .li_wrapper {
       li {
         border-bottom: 1px solid #444b68;
         transition: 0.2s 0.7s;
@@ -177,11 +177,11 @@ header {
       background-color: transparent;
       opacity: 1;
 
-      div {
+      .li_wrapper {
         display: flex;
       }
 
-      div,
+      .li_wrapper,
       li {
         transform: scale(1) !important;
       }
