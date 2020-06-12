@@ -1,8 +1,13 @@
 footer {
   background-color: $orange;
 
-  .text {
+  .attribution .text {
     color: $dark_blue;
+    font-size: 13px;
+  }
+
+  .attribution .text.white {
+    color: $white;
   }
 
   p {
@@ -55,6 +60,10 @@ footer {
 
     .fb {
       margin-right: 30px;
+    }
+
+    .tt {
+      margin-top: 2px;
     }
   }
 }
