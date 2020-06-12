@@ -32,7 +32,7 @@
       content: "";
       display: block;
       position: absolute;
-      width: 117px;
+      width: 125px;
       height: 4px;
       background-color: $orange;
       bottom: 0px;
@@ -52,12 +52,12 @@
   .features__feature {
     flex-direction: column;
     opacity: 1;
-    animation: featureOff 0.3s forwards;
+    animation: featureOff forwards;
   }
 
   .active.features__feature {
     opacity: 0;
-    animation: featureOn 0.3s 0.3s forwards;
+    animation: featureOn forwards;
   }
 
   @keyframes featureOn {
@@ -128,6 +128,14 @@
 
     .features__feature {
       height: 703px;
+    }
+
+    .title_3_gray {
+      flex: 1;
+    }
+
+    .features__nav .active.title_3_gray:after {
+      width: 100%;
     }
   }
 
