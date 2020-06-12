@@ -653,15 +653,15 @@ header .menu__social {
     opacity: 1;
     transition: 0.6s ease-in-out;
   }
-  header .menu__ul div li {
+  header .menu__ul .li_wrapper li {
     border-bottom: none;
     width: 308px;
     padding: 10px 0;
   }
-  header .menu__ul div li:first-child {
+  header .menu__ul .li_wrapper li:first-child {
     border-top: none;
   }
-  header .menu__ul div .menu_li {
+  header .menu__ul .li_wrapper .menu_li {
     color: #fff;
     font-size: 20px;
     width: auto;
@@ -682,11 +682,11 @@ header .menu__social {
     opacity: 1;
     transition: 0.6s ease-in-out 0.2s;
   }
-  header .open.menu__ul div li {
+  header .open.menu__ul .li_wrapper li {
     border-bottom: 1px solid #444b68;
     transition: 0.2s 0.7s;
   }
-  header .open.menu__ul div li:first-child {
+  header .open.menu__ul .li_wrapper li:first-child {
     border-top: 1px solid #444b68;
     transition: 0.2s 0.7s;
   }
@@ -705,10 +705,10 @@ header .menu__social {
     background-color: transparent;
     opacity: 1;
   }
-  header .menu__ul div {
+  header .menu__ul .li_wrapper {
     display: flex;
   }
-  header .menu__ul div,
+  header .menu__ul .li_wrapper,
 header .menu__ul li {
     transform: scale(1) !important;
   }
@@ -852,7 +852,7 @@ header .menu__ul li {
   content: "";
   display: block;
   position: absolute;
-  width: 117px;
+  width: 125px;
   height: 4px;
   background-color: #fa5757;
   bottom: 0px;
@@ -869,11 +869,11 @@ header .menu__ul li {
 .features .features__feature {
   flex-direction: column;
   opacity: 1;
-  animation: featureOff 0.3s forwards;
+  animation: featureOff forwards;
 }
 .features .active.features__feature {
   opacity: 0;
-  animation: featureOn 0.3s 0.3s forwards;
+  animation: featureOn forwards;
 }
 @keyframes featureOn {
   from {
@@ -934,6 +934,12 @@ header .menu__ul li {
   }
   .features .features__feature {
     height: 703px;
+  }
+  .features .title_3_gray {
+    flex: 1;
+  }
+  .features .features__nav .active.title_3_gray:after {
+    width: 100%;
   }
 
   .features .features__nav ul {
