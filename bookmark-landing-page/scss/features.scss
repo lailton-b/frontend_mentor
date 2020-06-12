@@ -92,7 +92,6 @@
       display: none;
       width: 134px;
       height: 49px;
-      padding: 13px 24px;
     }
 
     .text {
@@ -183,7 +182,9 @@
       text-align: left;
 
       .blue_btn {
-        display: block;
+        display: flex;
+        align-items: center;
+        justify-content: center;
       }
     }
 
@@ -197,5 +198,26 @@
   .features .features__text,
   .features .features__nav {
     padding-left: 170px;
+  }
+}
+
+@media screen and (min-width: 1550px) {
+  .features .features__text,
+  .features .features__nav {
+    padding-left: 350px;
+  }
+}
+
+@media screen and (min-width: 1700px) {
+  .features .features__text,
+  .features .features__nav {
+    padding-left: 450px;
+  }
+}
+
+@media screen and (min-width: 1919px) {
+  .features .features__text,
+  .features .features__nav {
+    padding-left: 500px;
   }
 }
