@@ -43,6 +43,7 @@ ul {
   box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.14), 0 2px 2px 0 rgba(0, 0, 0, 0.12),
     0 1px 3px 0 rgba(0, 0, 0, 0.2);
   cursor: pointer;
+  text-align: center;
 }
 
 .blue_btn,
@@ -83,8 +84,20 @@ ul {
   }
 }
 
-@media screen and (min-width: 1700px) {
+@media screen and (min-width: 1550px) {
   .container {
     padding: 0 350px;
+  }
+}
+
+@media screen and (min-width: 1700px) {
+  .container {
+    padding: 0 450px;
+  }
+}
+
+@media screen and (min-width: 1919px) {
+  .container {
+    padding: 0 500px;
   }
 }
