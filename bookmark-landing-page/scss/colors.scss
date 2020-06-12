@@ -1,3 +1,7 @@
+.btn:focus {
+  outline-color: $orange;
+}
+
 .blue_btn {
   background-color: $blue;
   color: $white;
@@ -31,11 +35,22 @@
   transition: 0.6s ease-in-out;
 }
 
+input:focus {
+  outline-color: $blue;
+}
+
 .title_1_blue,
 .title_2_blue,
 .title_3_blue,
 .menu_li {
   color: $dark_blue;
+}
+
+.title_2_white {
+  color: $white;
+}
+.text.white {
+  color: $white;
 }
 
 .title_3_gray {
