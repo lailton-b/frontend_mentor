@@ -788,6 +788,7 @@ header .menu__ul li {
 @media screen and (min-width: 767px) {
   .introduction .introduction__text {
     max-width: 480px;
+    align-items: initial;
   }
   .introduction .introduction__text .title_1_blue,
 .introduction .introduction__text .text,
@@ -796,11 +797,10 @@ header .menu__ul li {
   }
   .introduction .introduction__text .introduction__text__buttons {
     display: flex;
-    justify-content: space-around;
-    width: 100%;
+    justify-content: center;
   }
   .introduction .introduction__text .introduction__text__buttons .btn {
-    width: 215px;
+    width: 165px;
   }
 
   .introduction .introduction__illustration {
@@ -827,6 +827,7 @@ header .menu__ul li {
   .introduction .introduction__text {
     text-align: left;
     margin: 0;
+    align-items: initial;
   }
   .introduction .introduction__text .title_1_blue {
     margin-top: 60px;
@@ -982,6 +983,9 @@ header .menu__ul li {
 @media screen and (min-width: 1200px) {
   .features {
     padding: 30px 0;
+  }
+  .features .features__text {
+    max-width: 530px;
   }
   .features .features__feature {
     justify-content: space-between;
