@@ -53,6 +53,7 @@
 @media screen and (min-width: 767px) {
   .introduction .introduction__text {
     max-width: 480px;
+    align-items: initial;
 
     .title_1_blue,
     .text,
@@ -62,11 +63,10 @@
 
     .introduction__text__buttons {
       display: flex;
-      justify-content: space-around;
-      width: 100%;
+      justify-content: center;
 
       .btn {
-        width: 215px;
+        width: 165px;
       }
     }
   }
@@ -97,6 +97,7 @@
   .introduction .introduction__text {
     text-align: left;
     margin: 0;
+    align-items: initial;
 
     .title_1_blue {
       margin-top: 60px;
