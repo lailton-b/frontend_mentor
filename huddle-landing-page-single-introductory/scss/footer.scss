@@ -1,0 +1,64 @@
+.footer {
+  .social_media {
+    text-align: center;
+
+    svg {
+      width: 24px;
+      padding: 4.5px;
+      cursor: pointer;
+
+      circle,
+      path {
+        transition: 0.4s;
+      }
+    }
+
+    svg:hover {
+      circle {
+        stroke: $tertiary_color;
+      }
+      path {
+        fill: $tertiary_color;
+      }
+    }
+
+    svg.instagram:hover {
+      path {
+        stroke: $tertiary_color;
+        fill: none;
+      }
+    }
+  }
+
+  .attribution {
+    color: $secondary_color;
+    text-align: center;
+    font-size: 12px;
+    margin: 40px 0 0;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .footer .social_media svg {
+    width: 40px;
+
+    + svg {
+      margin-left: 7px;
+    }
+  }
+}
+
+@media screen and (min-width: 1439px) {
+  .attribution {
+    bottom: 10px;
+  }
+
+  .footer .social_media {
+    display: flex;
+    justify-content: flex-end;
+  }
+}
