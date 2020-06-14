@@ -1,0 +1,86 @@
+@import "normalize";
+@import "variables";
+
+:root {
+  font-size: 16px;
+}
+
+body {
+  background-color: $main_color;
+  background-image: url(../images/bg-mobile.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: top;
+}
+
+.wrapper {
+  padding: 34px;
+
+  .main__text,
+  .footer {
+    max-width: 253px;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (min-width: 767px) {
+  .wrapper {
+    .header,
+    .main,
+    .main__text,
+    .footer {
+      max-width: 507px;
+      margin: 0 auto;
+    }
+  }
+}
+
+@media screen and (min-width: 769px) {
+  body {
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
+}
+
+@media screen and (min-width: 1439px) {
+  body {
+    background-image: url(../images/bg-desktop.svg);
+    background-position: initial;
+    background-size: auto;
+    justify-content: flex-start;
+  }
+
+  .wrapper {
+    padding: 67px;
+    margin: 0 auto;
+
+    .header,
+    .main,
+    .footer {
+      max-width: 1265px;
+    }
+  }
+
+  .main {
+    .illustration {
+      max-width: 695px;
+    }
+
+    .main__text {
+      max-width: 509;
+    }
+  }
+}
+
+@media screen and (min-width: 1500px) {
+  body {
+    background-size: cover;
+  }
+}
+
+@import "header";
+@import "main";
+@import "footer";
