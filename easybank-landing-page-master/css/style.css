@@ -363,8 +363,31 @@ li a {
   font-size: 0.9375rem;
 }
 
+.title {
+  font-size: 2.3125rem;
+  font-weight: 400;
+}
+
+.text_1 {
+  font-size: 0.875rem;
+  line-height: 1.4rem;
+}
+
+@media screen and (min-width: 767px) {
+  .title {
+    font-size: 3.375rem;
+  }
+
+  .text_1 {
+    font-size: 1.125rem;
+    line-height: 1.7rem;
+  }
+}
 .container {
   padding: 0px 15px;
+  max-width: 1920px;
+  margin: 0 auto;
+  box-sizing: border-box;
 }
 
 ul {
@@ -406,14 +429,31 @@ a {
     padding: 0px 60px;
   }
 }
-@media screen and (min-width: 1279px) {
+@media screen and (min-width: 1400px) {
   .container {
     padding: 0px 165px;
   }
 }
+@media screen and (min-width: 1600px) {
+  .container {
+    padding: 0px 230px;
+  }
+}
+@media screen and (min-width: 1750px) {
+  .container {
+    padding: 0px 260px;
+  }
+}
+@media screen and (min-width: 1850px) {
+  .container {
+    padding: 0px 330px;
+  }
+}
 /* Header desktop first */
 header {
+  background-color: #fff;
   position: relative;
+  z-index: 3;
 }
 header .menu__ul {
   height: 80px;
@@ -479,7 +519,7 @@ header .menu__ul__hamburger button:focus {
     left: 50%;
     transform: translateX(-50%);
     overflow: hidden;
-    transition: 0.6s ease-in-out !important;
+    transition: 0.6s ease-in !important;
   }
   header.open .menu__ul__li {
     width: 100%;
@@ -525,13 +565,140 @@ header .menu__ul__hamburger .open__menu {
     display: block;
   }
 }
+@media screen and (max-width: 374px) {
+  header .menu__ul__li ul {
+    width: calc(100% - 30px);
+  }
+}
 @media screen and (max-width: 600px) {
+  header .menu__ul {
+    height: 64px;
+  }
+
+  header .menu__ul__li {
+    top: 64px;
+  }
+
   header .menu__ul__li ul {
     width: calc(100% - 48px);
   }
 }
-@media screen and (max-width: 374px) {
-  header .menu__ul__li ul {
-    width: calc(100% - 30px);
+main {
+  background-color: #fafafa;
+  display: flex;
+  background-image: url("../images/bg-intro-desktop.svg");
+  background-repeat: no-repeat;
+  background-position-x: 624px;
+  background-position-y: -260px;
+  justify-content: space-between;
+  position: relative;
+}
+main.container {
+  padding-right: 0px;
+}
+main .main__text {
+  height: 721px;
+}
+main .main__text .title {
+  width: 404px;
+  margin: 181px 0 33px 0;
+}
+main .main__text .text_1 {
+  width: 447px;
+  margin: 0 0 40px;
+}
+main .main__image {
+  position: absolute;
+  height: 939px;
+  width: 636px;
+  right: 0px;
+  top: -121px;
+  z-index: 1;
+  overflow: hidden;
+}
+
+@media screen and (max-width: 1250px) {
+  main {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+  main .main__text {
+    height: auto;
+    text-align: center;
+  }
+  main .main__text .title {
+    margin: 36px auto 33px auto;
+  }
+  main .main__image {
+    position: relative;
+    height: 529px;
+    width: 636px;
+    top: 0;
+    z-index: 1;
+    overflow: hidden;
+  }
+  main .main__image img {
+    display: block;
+    width: 100%;
+    top: -228px;
+    position: relative;
+  }
+}
+@media screen and (min-width: 375px) and (max-width: 440px) {
+  main {
+    background-size: contain;
+    padding-right: 15px;
+  }
+}
+@media screen and (max-width: 720px) {
+  main {
+    background-image: url("../images/bg-intro-mobile.svg");
+    background-position-x: right;
+    background-position-y: -85px;
+    padding: 0;
+  }
+  main .main__text .title {
+    margin: 48px 0 23px;
+    width: 300px;
+  }
+  main .main__text .text_1 {
+    margin-bottom: 33px;
+    width: 300px;
+  }
+  main .main__image {
+    margin: 0 auto;
+    width: 300px;
+    height: 259px;
+  }
+  main .main__image img {
+    height: auto;
+    width: 300px;
+    margin: 0 auto;
+    top: -106px;
+  }
+}
+@media screen and (min-width: 720px) and (max-width: 768px) {
+  main {
+    background-position-x: 107px;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1251px) {
+  main {
+    background-position-x: 321px;
+  }
+}
+@media screen and (min-width: 1251px) and (max-width: 1399px) {
+  main {
+    background-position-x: 424px;
+  }
+}
+@media screen and (min-width: 1690px) {
+  main {
+    background-position-x: 720px;
+  }
+}
+@media screen and (min-width: 1800px) {
+  main {
+    background-position-x: 820px;
   }
 }
