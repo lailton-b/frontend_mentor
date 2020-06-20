@@ -1,7 +1,9 @@
 /* Header desktop first */
 
 header {
+  background-color: #fff;
   position: relative;
+  z-index: 3;
 
   .menu__ul {
     height: 80px;
@@ -78,7 +80,7 @@ header {
       left: 50%;
       transform: translateX(-50%);
       overflow: hidden;
-      transition: 0.6s ease-in-out !important;
+      transition: 0.6s ease-in !important;
     }
 
     &.open .menu__ul__li {
@@ -139,14 +141,22 @@ header {
   }
 }
 
-@media screen and (max-width: 600px) {
-  header .menu__ul__li ul {
-    width: calc(100% - 48px);
-  }
-}
-
 @media screen and (max-width: 374px) {
   header .menu__ul__li ul {
     width: calc(100% - 30px);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  header .menu__ul {
+    height: 64px;
+  }
+
+  header .menu__ul__li {
+    top: 64px;
+  }
+
+  header .menu__ul__li ul {
+    width: calc(100% - 48px);
   }
 }
