@@ -100,3 +100,11 @@
     }
   }
 }
+
+@media screen and (max-width: 350px) {
+  .features {
+    .features__feature {
+      flex-basis: 290px;
+    }
+  }
+}
