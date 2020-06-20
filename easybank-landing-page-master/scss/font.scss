@@ -28,8 +28,23 @@ li a {
   font-weight: 400;
 }
 
+.subtitle_1 {
+  font-size: 1.75rem;
+  font-weight: 300;
+}
+
+.subtitle_2 {
+  font-size: 1.25rem;
+  font-weight: 300;
+}
+
 .text_1 {
   font-size: 0.875rem;
+  line-height: 1.4rem;
+}
+
+.text_2 {
+  font-size: 0.8125rem;
   line-height: 1.4rem;
 }
 
@@ -38,8 +53,21 @@ li a {
     font-size: 3.375rem;
   }
 
+  .subtitle_1 {
+    font-size: 2.4375rem;
+  }
+
+  .subtitle_2 {
+    font-size: 1.5625rem;
+  }
+
   .text_1 {
     font-size: 1.125rem;
+    line-height: 1.7rem;
+  }
+
+  .text_2 {
+    font-size: 0.96rem;
     line-height: 1.7rem;
   }
 }
