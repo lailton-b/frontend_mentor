@@ -1,0 +1,139 @@
+main {
+  background-color: $very-light-bray;
+  display: flex;
+  background-image: url("../images/bg-intro-desktop.svg");
+  background-repeat: no-repeat;
+  background-position-x: 624px;
+  background-position-y: -260px;
+  justify-content: space-between;
+  position: relative;
+
+  &.container {
+    padding-right: 0px;
+  }
+
+  .main__text {
+    height: 721px;
+
+    .title {
+      width: 404px;
+      margin: 181px 0 33px 0;
+    }
+
+    .text_1 {
+      width: 447px;
+      margin: 0 0 40px;
+    }
+  }
+
+  .main__image {
+    position: absolute;
+    height: 939px;
+    width: 636px;
+    right: 0px;
+    top: -121px;
+    z-index: 1;
+    overflow: hidden;
+  }
+}
+
+@media screen and (max-width: 1250px) {
+  main {
+    flex-direction: column-reverse;
+    align-items: center;
+
+    .main__text {
+      height: auto;
+      text-align: center;
+    }
+
+    .main__text .title {
+      margin: 36px auto 33px auto;
+    }
+
+    .main__image {
+      position: relative;
+      height: 529px;
+      width: 636px;
+      top: 0;
+      z-index: 1;
+      overflow: hidden;
+    }
+
+    .main__image img {
+      display: block;
+      width: 100%;
+      top: -228px;
+      position: relative;
+    }
+  }
+}
+
+@media screen and (min-width: 375px) and (max-width: 440px) {
+  main {
+    background-size: contain;
+    padding-right: 15px;
+  }
+}
+
+@media screen and (max-width: 720px) {
+  main {
+    background-image: url("../images/bg-intro-mobile.svg");
+    background-position-x: right;
+    background-position-y: -85px;
+    padding: 0;
+
+    .main__text .title {
+      margin: 48px 0 23px;
+      width: 300px;
+    }
+
+    .main__text .text_1 {
+      margin-bottom: 33px;
+      width: 300px;
+    }
+
+    .main__image {
+      margin: 0 auto;
+      width: 300px;
+      height: 259px;
+    }
+
+    .main__image img {
+      height: auto;
+      width: 300px;
+      margin: 0 auto;
+      top: -106px;
+    }
+  }
+}
+
+@media screen and (min-width: 720px) and (max-width: 768px) {
+  main {
+    background-position-x: 107px;
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1251px) {
+  main {
+    background-position-x: 321px;
+  }
+}
+
+@media screen and (min-width: 1251px) and (max-width: 1399px) {
+  main {
+    background-position-x: 424px;
+  }
+}
+
+@media screen and (min-width: 1690px) {
+  main {
+    background-position-x: 720px;
+  }
+}
+
+@media screen and (min-width: 1800px) {
+  main {
+    background-position-x: 820px;
+  }
+}
