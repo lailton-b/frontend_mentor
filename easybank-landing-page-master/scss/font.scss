@@ -30,22 +30,43 @@ li a {
 
 .subtitle_1 {
   font-size: 1.75rem;
-  font-weight: 300;
 }
 
 .subtitle_2 {
   font-size: 1.25rem;
+}
+
+.subtitle_1,
+.subtitle_2,
+.subtitle_3 {
   font-weight: 300;
 }
 
 .text_1 {
   font-size: 0.875rem;
+}
+
+.text_1,
+.text_2 {
   line-height: 1.4rem;
 }
 
-.text_2 {
+.text_2,
+.subtitle_3 {
   font-size: 0.8125rem;
-  line-height: 1.4rem;
+}
+
+.subtitle_3,
+.text_3 {
+  line-height: 1.2rem;
+}
+
+.text_3 {
+  font-size: 0.8125rem;
+}
+
+.text_4 {
+  font-size: 0.6875rem;
 }
 
 @media screen and (min-width: 767px) {
@@ -63,11 +84,15 @@ li a {
 
   .text_1 {
     font-size: 1.125rem;
+  }
+
+  .text_1,
+  .text_2 {
     line-height: 1.7rem;
   }
 
-  .text_2 {
+  .text_2,
+  .subtitle_3 {
     font-size: 0.96rem;
-    line-height: 1.7rem;
   }
 }
