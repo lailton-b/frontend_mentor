@@ -370,22 +370,43 @@ li a {
 
 .subtitle_1 {
   font-size: 1.75rem;
-  font-weight: 300;
 }
 
 .subtitle_2 {
   font-size: 1.25rem;
+}
+
+.subtitle_1,
+.subtitle_2,
+.subtitle_3 {
   font-weight: 300;
 }
 
 .text_1 {
   font-size: 0.875rem;
+}
+
+.text_1,
+.text_2 {
   line-height: 1.4rem;
 }
 
-.text_2 {
+.text_2,
+.subtitle_3 {
   font-size: 0.8125rem;
-  line-height: 1.4rem;
+}
+
+.subtitle_3,
+.text_3 {
+  line-height: 1.2rem;
+}
+
+.text_3 {
+  font-size: 0.8125rem;
+}
+
+.text_4 {
+  font-size: 0.6875rem;
 }
 
 @media screen and (min-width: 767px) {
@@ -403,12 +424,16 @@ li a {
 
   .text_1 {
     font-size: 1.125rem;
+  }
+
+  .text_1,
+.text_2 {
     line-height: 1.7rem;
   }
 
-  .text_2 {
+  .text_2,
+.subtitle_3 {
     font-size: 0.96rem;
-    line-height: 1.7rem;
   }
 }
 .container {
@@ -833,5 +858,70 @@ main .main__image img {
   .features .features__feature .text_2 {
     margin: 0px auto;
     max-width: 290px;
+  }
+}
+@media screen and (max-width: 350px) {
+  .features .features__feature {
+    flex-basis: 290px;
+  }
+}
+.articles {
+  background-color: #fafafa;
+  padding-top: 96px;
+  padding-bottom: 80px;
+}
+.articles .subtitle_1 {
+  margin-top: 0;
+}
+.articles .articles__wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+.articles .articles__article {
+  max-width: 265px;
+  margin: 11px 0;
+  background-color: white;
+  cursor: pointer;
+}
+.articles .articles__article:hover .subtitle_3 {
+  color: #31d35c;
+}
+.articles .articles__article a {
+  display: block;
+}
+.articles .articles__article + .articles__article {
+  margin-left: 15px;
+}
+.articles .articles__article .articles__article__text {
+  padding: 20px 25px 13px;
+}
+.articles .articles__article .subtitle_3 {
+  max-width: 190px;
+  transition: 0.4s;
+}
+.articles .articles__article img {
+  width: 265px;
+  height: 200px;
+  border-top-left-radius: 7px;
+  border-top-right-radius: 7px;
+}
+
+@media screen and (max-width: 1253px) {
+  .articles .subtitle_1 {
+    text-align: center;
+  }
+  .articles .articles__wrapper {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 735px) {
+  .articles__wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .articles .articles__article + .articles__article {
+    margin-left: 0px;
   }
 }
