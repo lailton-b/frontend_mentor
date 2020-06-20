@@ -13,7 +13,7 @@ main {
   }
 
   .main__text {
-    height: 721px;
+    height: 696px;
 
     .title {
       width: 404px;
@@ -41,6 +41,10 @@ main {
   main {
     flex-direction: column-reverse;
     align-items: center;
+
+    &.container {
+      padding-bottom: 80px;
+    }
 
     .main__text {
       height: auto;
@@ -105,6 +109,32 @@ main {
       margin: 0 auto;
       top: -106px;
     }
+  }
+}
+
+@media screen and (max-width: 374px) {
+  main {
+    .main__text .title,
+    .main__text .text_1,
+    .main__image,
+    .main__image img {
+      width: 290px;
+    }
+  }
+  main.container {
+    padding-right: 15px;
+  }
+}
+
+@media screen and (min-width: 375px) {
+  main.container {
+    padding-right: 24px;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  main.container {
+    padding-right: 60px;
   }
 }
 
