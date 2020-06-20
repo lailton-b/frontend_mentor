@@ -22,3 +22,24 @@ h4 {
 li a {
   font-size: 0.9375rem;
 }
+
+.title {
+  font-size: 2.3125rem;
+  font-weight: 400;
+}
+
+.text_1 {
+  font-size: 0.875rem;
+  line-height: 1.4rem;
+}
+
+@media screen and (min-width: 767px) {
+  .title {
+    font-size: 3.375rem;
+  }
+
+  .text_1 {
+    font-size: 1.125rem;
+    line-height: 1.7rem;
+  }
+}
