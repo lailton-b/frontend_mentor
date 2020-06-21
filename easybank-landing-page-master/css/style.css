@@ -968,6 +968,9 @@ main .main__image img {
 .footer ul {
   margin-left: 128px;
 }
+.footer ul a {
+  color: white;
+}
 .footer ul a:hover {
   color: #31d35c;
   transition: 0.4s;
