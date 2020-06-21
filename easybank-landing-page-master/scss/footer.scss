@@ -51,6 +51,10 @@
   ul {
     margin-left: 128px;
 
+    a {
+      color: $white;
+    }
+
     a:hover {
       color: $lime-green;
       transition: 0.4s;
